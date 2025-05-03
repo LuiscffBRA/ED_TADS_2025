@@ -1,0 +1,120 @@
+Q2:	
+Sequência 1: 44, 98, 78, 1, 67, 30
+
+    
+Inserir 44 :       Inserir 98 (troca com 44): → Heapify           Inserir 78:             Inserir 1:   (Nenhuma troca necessária)        Inserir 67 (troca com 44): → Heapify:         Inserir 30:     Heap Máximo Final para Sequência 1:
+
+    44             	 44                       98                   98                     98						 98             98                         98                           98
+   	          	/                        /                    /  \                   /  \						/  \           /  \                       /  \                         /  \
+		      98                        44                   44  78                 44  78					       44  78         67  78                     67  78                       67  78
+                  								           /						      / \            / \                        / \  /                       / \  /
+										          1  						     1  67          1  44                      1  44 30                     1  44 30
+Sequência 2: 12, 55, 63, 17, 2, 9
+
+    
+Inserir 12 :       Inserir 55 (troca com 12): → Heapify           Inserir 63:             Inserir 17:   (Nenhuma troca necessária)        Inserir 2:        inserir 9 (troca com 2):              Heap Máximo Final para Sequência 2:
+
+    12             	 12                       55                   55                     63						 63                         63                           63
+   	          	/                        /                    /  \                   /  \						/  \                       /  \                         /  \
+		      55                        12                   12  63                 12  55					       12  55                     12  55                       12  55
+                  								           /						      / \                        / \                          / \  /
+										          17  						     17  2                      17  9                        17 9  
+																		                           /                           /
+																	                                  2                           2
+Sequência 3: 7, 95, 32, 44, 28, 13
+
+    
+Inserir 7 :       Inserir 95 (troca com 7): → Heapify           Inserir 32:             Inserir 44:   → Heapify:             Inserir 28           Inserir 13:     Heap Máximo Final para Sequência 3:
+
+    7             	 7                        95                   95                     95 	   95		         95              95                          95                        
+   	          	/                        /                    /  \                   /  \	  /  \			/  \            /  \                        /  \                        
+		      95                        7                    7   32                 7  32	 44  32 	       44  32          44  32                      44  32                       
+                  								           /		/		      / \             / \  /                      / \  /                      
+				                                                          44           7                     7  28           7  28 13                    7  28 13
+Sequência 4: 21, 41, 53, 64, 1, 90
+
+    
+Inserir 21 :       Inserir 41 (troca com 21): → Heapify           Inserir 53:  → Heapify:         Inserir 64 (troca com 53): → Heapify:       Inserir 1        Inserir 90:   → Heapify:       → Heapify:
+
+    21             	 21                       41                   41          53               53			         64		 64                64             64              90
+   	          	/                        /                    /  \        /  \             /  \				/ \		/  \              /  \           /  \            /  \
+		      41                        21                   21  53      21  41           21  41		       53 41	       53  41            53  41         90  41          64  41
+                  								                 /			      /		      / \               / \  /         / \             / \  
+												64                           21              21  1             21  1 90       21  1           21  1
+																						 /               /
+																						53              53
+Sequência 5: 77, 19, 37, 27, 2, 99
+
+    
+Inserir 77 :       Inserir 19:            Inserir 37:                 Inserir 27:       Inserir 2:        Inserir 99 (troca com 37, depois com 77):   → Heapify:       → Heapify:   Heap Máximo Final para Sequência 5:
+
+    77                  77                   77                            77               77                		77                              77                99                     99
+   	               /                    /  \                          /  \             /  \              	       /  \                            /  \              /  \                   /  \
+		      19                   19  37                        19  37           19  37            	      19  37                          19  99            77  37                 77  37
+                  							/	         / \               	     / \                             / \               / \                    /  \
+								       27		27  2	          	    27  2                           27  2             27  2                  27   2
+													    	       /                               /                 /                       /
+													   	      99		              37		19			19
+
+Sequência 6: 13, 8, 29, 101, 44, 67
+
+    
+Inserir 13 :       Inserir 8:            Inserir 29:         → Heapify:         Inserir 101:     → Heapify:          Inserir 44:        Inserir 67:  → Heapify:      	Heap Máximo Final para Sequência 6:
+
+    13                  13                   13                  29                  29              101                 101               101            101                          101
+   	               /                    /  \                /  \                /  \            /  \                /  \              /  \           /  \                         /   \
+		      8                    8   29              8   13              8   13          8   13              8   13            8    13        29  67                       29   67
+                  								  /	          /                   / \               / \   /        / \   /         	            / \   /
+								      		101		 29		     29 44	       29 44 67	      8  44 13	    	           8  44 13
+													    	                                 		  	
+													   	      		            			 	
+Q3:
+
+Sequência 1: Heap Final            Passo 1: Remover 98 (raiz)                      Passo 2: Heapify Down                                              Heap após remoção:
+                                   Substituir pela última folha (30)               Comparar 30 com seus filhos (67 e 78)
+                                                                                   Trocar com o maior filho (78)
+            98                                  30                                             78                                                            78
+           /  \                                /  \                                           /  \                                                          /  \
+         67   78                              67  78                                         67  30                                                        67  44
+        / \    /                             / \  /                                         / \                                                           / \
+       1  44  30                            1  44                                          1  44                                                         1  30
+									           Agora 30 não tem filhos, então o heap está correto.
+
+Sequência 2: Aplicando a mesma logica :
+
+	55
+       /  \
+      17   9
+     /
+    12
+
+Sequência 3:
+
+	44
+       /  \
+      28  32
+     / \
+    7  13
+
+Sequência 4:
+	64
+       /  \
+      53  41
+     /  \
+    21   1
+
+
+Sequência 5:
+	77
+       /  \	
+      27  37
+     / \
+    19  2
+
+
+Sequência 6:
+	67
+       /  \
+      44  13
+     / \
+    8   29	
